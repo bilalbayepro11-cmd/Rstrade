@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="RS TRADE — Trading tools para gestionar riesgo y operaciones.">
+<title>RS TRADE — Trading Tools</title>
+<style>
+:root{--bg:#07080b;--p:#111319;--p2:#15171d;--t:#f5f5f5;--m:#9297a3;--g:#d6ad55;--g2:#f0cf7a;--l:#282b34}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% -10%,#30230b,transparent 32%),var(--bg);color:var(--t);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}.c{width:min(1100px,92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:#07080bd9;backdrop-filter:blur(15px);border-bottom:1px solid var(--l)}
+nav{height:70px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:10px;align-items:center;font-weight:900;letter-spacing:1.5px}.mark{width:40px;height:40px;border:1px solid #927437;border-radius:12px;display:grid;place-items:center;color:var(--g2);background:#11100d;font-weight:900}.links{display:flex;gap:25px;color:#c4c7ce;font-size:14px}
+.hero{padding:80px 0 55px;display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}.ey{color:var(--g2);font-size:13px;font-weight:800;letter-spacing:2px}.hero h1{font-size:clamp(43px,7vw,76px);line-height:1;margin:15px 0 20px;letter-spacing:-3px}.hero h1 span{color:var(--g2)}.hero p{color:var(--m);font-size:18px;line-height:1.6}.btns{display:flex;gap:12px;margin-top:27px;flex-wrap:wrap}.btn{padding:13px 18px;border-radius:12px;border:1px solid var(--l);font-weight:800}.primary{background:linear-gradient(135deg,var(--g2),var(--g));color:#090a0d;border:0}
+.chart{height:300px;border:1px solid var(--l);border-radius:24px;background:#0d0f14;position:relative;overflow:hidden;padding:22px}.chart:before{content:"";position:absolute;inset:0;background:linear-gradient(#fff1 1px,transparent 1px),linear-gradient(90deg,#fff1 1px,transparent 1px);background-size:42px 42px}.ct{position:relative;display:flex;justify-content:space-between;color:#aeb2bd;font-size:12px}.bars{position:absolute;left:30px;right:30px;bottom:28px;top:65px;display:flex;align-items:end;gap:13px}.bar{width:10px;background:var(--g2);border-radius:3px;box-shadow:0 0 12px #d6ad5522}.r{background:#a46b55}.b1{height:80px}.b2{height:125px}.b3{height:105px}.b4{height:160px}.b5{height:140px}.b6{height:190px}.b7{height:165px}.b8{height:220px}
+section{padding:55px 0}.head{margin-bottom:25px}.head h2{font-size:30px;margin:0 0 8px}.head p{margin:0;color:var(--m)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:linear-gradient(180deg,var(--p2),var(--p));border:1px solid var(--l);border-radius:18px;padding:22px;min-height:170px}.ico{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:#211b0e;color:var(--g2);font-weight:900;margin-bottom:17px}.card h3{margin:0 0 8px}.card p{color:var(--m);line-height:1.5;font-size:14px}
+.calc{background:#0f1116;border:1px solid var(--l);border-radius:22px;padding:24px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field label{display:block;color:#b7bac2;font-size:13px;margin-bottom:7px}.field input{width:100%;padding:13px;background:#090a0d;color:white;border:1px solid #2a2d36;border-radius:10px;outline:0}.field input:focus{border-color:var(--g)}.results{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}.metric{background:#090a0d;border:1px solid var(--l);padding:15px;border-radius:12px}.metric small{color:var(--m)}.metric strong{display:block;margin-top:5px;color:var(--g2);font-size:20px}.note{color:var(--m);font-size:12px;line-height:1.5;margin-top:12px}.foot{border-top:1px solid var(--l);padding:28px 0;color:#777d89;font-size:12px;display:flex;justify-content:space-between}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.links{display:none}.grid{grid-template-columns:1fr}.chart{height:250px}.hero{padding-top:55px}.results{grid-template-columns:1fr 1fr}}@media(max-width:480px){.fields,.results{grid-template-columns:1fr}.foot{flex-direction:column;gap:8px}}
+</style>
+</head>
+<body>
+<header><div class="c"><nav>
+<a class="brand" href="#"><span class="mark">RS</span>RS TRADE</a>
+<div class="links"><a href="#tools">Tools</a><a href="#risk">Risk Calculator</a><a href="#about">About</a></div>
+</nav></div></header>
+
+<main>
+<section class="c hero">
+<div><div class="ey">TRADE SMARTER · MANAGE YOUR RISK</div>
+<h1>Tools built for <span>better trades.</span></h1>
+<p>RS TRADE reúne herramientas simples para calcular riesgo, tamaño de posición y otros datos importantes antes de abrir una operación.</p>
+<div class="btns"><a class="btn primary" href="#risk">Calculate risk</a><a class="btn" href="#tools">Explore tools</a></div></div>
+<div class="chart"><div class="ct"><span>RS TRADE · MARKET VIEW</span><span>RISK FIRST</span></div><div class="bars">
+<i class="bar b1"></i><i class="bar b2"></i><i class="bar r b3"></i><i class="bar b4"></i><i class="bar b5"></i><i class="bar b6"></i><i class="bar r b7"></i><i class="bar b8"></i>
+</div></div>
+</section>
+
+<section id="tools"><div class="c"><div class="head"><h2>Trading tools</h2><p>Lo esencial para controlar una operación antes de entrar.</p></div>
+<div class="grid">
+<article class="card"><div class="ico">%</div><h3>Risk Calculator</h3><p>Calcula cuánto dinero estás arriesgando según tu capital y porcentaje de riesgo.</p></article>
+<article class="card"><div class="ico">R:R</div><h3>Risk / Reward</h3><p>Compara el riesgo de tu entrada con tu objetivo de beneficio.</p></article>
+<article class="card"><div class="ico">PS</div><h3>Position Size</h3><p>Calcula el tamaño de posición según la distancia entre entrada y stop.</p></article>
+<article class="card"><div class="ico">DD</div><h3>Drawdown</h3><p>Comprueba cuánto necesitas recuperar después de una pérdida.</p></article>
+<article class="card"><div class="ico">P/L</div><h3>Profit & Loss</h3><p>Estima beneficio o pérdida según entrada, salida y tamaño.</p></article>
+<article class="card"><div class="ico">JR</div><h3>Trading Journal</h3><p>Próximamente: registra operaciones y analiza tus resultados.</p></article>
+</div></div></section>
+
+<section id="risk"><div class="c"><div class="head"><h2>Risk Calculator</h2><p>Calcula el riesgo máximo y el tamaño de posición.</p></div>
+<div class="calc"><div class="fields">
+<div class="field"><label>Account balance (€)</label><input id="balance" type="number" value="10000"></div>
+<div class="field"><label>Risk (%)</label><input id="riskPct" type="number" value="1" step=".1"></div>
+<div class="field"><label>Entry price</label><input id="entry" type="number" value="3000" step=".01"></div>
+<div class="field"><label>Stop loss</label><input id="stop" type="number" value="2990" step=".01"></div>
+</div>
+<div class="results">
+<div class="metric"><small>Max risk</small><strong id="rm">€100.00</strong></div>
+<div class="metric"><small>Stop distance</small><strong id="dist">10.00</strong></div>
+<div class="metric"><small>Position units*</small><strong id="units">10.00</strong></div>
+<div class="metric"><small>Risk / unit</small><strong id="ru">€10.00</strong></div>
+</div>
+<div class="note">*Cálculo genérico educativo. En Forex, XAUUSD, índices, CFDs o futuros el valor por punto/tick depende del instrumento y del bróker.</div>
+</div></div></section>
+
+<section id="about"><div class="c"><div class="head"><h2>RS TRADE</h2><p>Risk first. Trade smarter.</p></div><div class="card"><h3>Una plataforma hecha para traders.</h3><p>RS TRADE es un proyecto independiente. Las herramientas son educativas y no constituyen asesoramiento financiero ni una recomendación para comprar o vender activos.</p></div></div></section>
+</main>
+<footer><div class="c foot"><span>© 2026 RS TRADE. All rights reserved.</span><span>Educational tools · No financial advice</span></div></footer>
+
+<script>
+const balanceEl=document.getElementById("balance");
+const riskPctEl=document.getElementById("riskPct");
+const entryEl=document.getElementById("entry");
+const stopEl=document.getElementById("stop");
+const rmEl=document.getElementById("rm");
+const distEl=document.getElementById("dist");
+const unitsEl=document.getElementById("units");
+const ruEl=document.getElementById("ru");
+
+function calc(){
+  const b=Number(balanceEl.value)||0;
+  const r=Number(riskPctEl.value)||0;
+  const e=Number(entryEl.value)||0;
+  const s=Number(stopEl.value)||0;
+  const m=b*r/100;
+  const d=Math.abs(e-s);
+  const u=d?m/d:0;
+  rmEl.textContent="€"+m.toFixed(2);
+  distEl.textContent=d.toFixed(2);
+  unitsEl.textContent=u.toFixed(2);
+  ruEl.textContent="€"+d.toFixed(2);
+}
+[balanceEl,riskPctEl,entryEl,stopEl].forEach(el=>el.addEventListener("input",calc));
+calc();
+</script>
+</body>
+</html>
